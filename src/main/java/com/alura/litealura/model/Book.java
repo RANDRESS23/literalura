@@ -9,13 +9,13 @@ public class Book {
     private Long id;
     private String title;
     private List<Author> authors;
-    private List<String> languages;
+    private List<Language> languages;
     private Long download_count;
 
     public Book() {
     }
 
-    public Book(Long id, String title, List<Author> authors, List<String> languages, Long download_count) {
+    public Book(Long id, String title, List<Author> authors, List<Language> languages, Long download_count) {
         this.id = id;
         this.title = title;
         this.authors = authors;
@@ -47,11 +47,11 @@ public class Book {
         this.authors = authors;
     }
 
-    public List<String> getLanguages() {
+    public List<Language> getLanguages() {
         return languages;
     }
 
-    public void setLanguages(List<String> languages) {
+    public void setLanguages(List<Language> languages) {
         this.languages = languages;
     }
 

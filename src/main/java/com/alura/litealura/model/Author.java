@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Author {
+    private Long id;
     private String name;
     private Long birth_year;
     private Long death_year;
@@ -11,10 +12,19 @@ public class Author {
     public Author() {
     }
 
-    public Author(String name, Long birth_year, Long death_year) {
+    public Author(Long id, String name, Long birth_year, Long death_year) {
+        this.id = id;
         this.name = name;
         this.birth_year = birth_year;
         this.death_year = death_year;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
